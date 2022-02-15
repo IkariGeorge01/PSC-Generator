@@ -1,0 +1,17 @@
+import random
+from datetime import date
+
+
+ 
+print('PaySafeCard generator BY - IkariGeorge01')
+
+# Ile kodów chcesz wygenerować?
+iloscKodow = int(input('How many do you want to generate code:: '))
+
+for i in range(iloscKodow):
+    f = open('PSC CODE.txt', 'a+')
+    kodi = ('').join(random.choices("1234567890", k=15))
+    kod = ('0' + kodi)
+    data = date.today()
+    f.write(kod + ("") + str() + '\n')
+    f.close()
